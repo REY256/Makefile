@@ -2,7 +2,7 @@ main:
 
 CXX = g++
 LDLIBS = -lpthread
-CXXFLAGS = -std=c++2a -pthread -O3 -static
+CXXFLAGS = -g -std=c++2a -pthread -O3 -static
 
 main: main.o
 	$(CXX) main.o $(LDLIBS) -o main
