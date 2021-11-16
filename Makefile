@@ -1,14 +1,16 @@
 main:
 
-CXX = clang++
-LDLIBS = -lgmp -lgmpxx -lSDL2 -lpthread
-CXXFLAGS = -std=c++2a -Wall -Wextra -pthread -static -g
+CC = clang
+#CC = x86_64-w64-mingw32-gcc 
+
+LIBS = -lgmp -lSDL2 -lpthread
+CCFLAGS = -std=c2x -Wall -Wextra -pthread -static -O3
 
 main: main.o
-	$(CXX) main.o $(LDLIBS) -o main
+	$(CC) main.o $(LIBS) -o main
 
-main.o: main.cpp
-	$(CXX) -c $(CXXFLAGS) main.cpp
+main.o: main.c
+	$(CC) -c $(CCFLAGS) main.c
 
 clean:
 	rm *.o
