@@ -11,9 +11,9 @@ CCFLAGS = -Wall -Wextra -pthread -static -O2
 main: main.o
 	$(CC) main.o $(LIBS) -o main
 
+
 main.o: main.c
 	$(CC) -c $(CCFLAGS) main.c
-	
 
 #	main.o: main.cpp
 #		$(CC) -c $(CCFLAGS) main.cpp
