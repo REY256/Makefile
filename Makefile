@@ -5,7 +5,7 @@ CC = clang
 #CC = gcc
 #CC = g++
 
-LIBS = -lm -lpthread -lgmp -lSDL2
+LIBS = -lm -lpthread -lgmp -lcurl -lSDL2
 CCFLAGS = -Wall -Wextra -pthread -static -g
 
 main: main.o
