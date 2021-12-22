@@ -6,7 +6,7 @@ CC = clang
 #CC = g++
 
 LIBS = -lm -lpthread -lgmp -lSDL2
-CCFLAGS = -Wall -Wextra -pthread -static -O2
+CCFLAGS = -Wall -Wextra -pthread -static -g
 
 main: main.o
 	$(CC) main.o $(LIBS) -o main
