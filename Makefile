@@ -1,22 +1,15 @@
 main:
 
-CC = clang
-#CC = clang++
-#CC = gcc
-#CC = g++
+CC = gcc
 
-LIBS = -lm -lpthread -lgmp -lcurl -lSDL2
-CCFLAGS = -Wall -Wextra -pthread -static -g
+CCFLAGS = -std=c17 -Wall -Wextra -pthread -O2
+LIBS = -static -lm -lpthread
 
 main: main.o
 	$(CC) main.o $(LIBS) -o main
 
-
 main.o: main.c
 	$(CC) -c $(CCFLAGS) main.c
-
-#	main.o: main.cpp
-#		$(CC) -c $(CCFLAGS) main.cpp
 
 clean:
 	rm *.o
