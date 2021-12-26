@@ -2,8 +2,8 @@ main:
 
 CC = clang
 
-CCFLAGS = -std=c17 -Wall -Wextra -pthread -O3
-LIBS = -lm -lpthread -lSDL2
+CCFLAGS = -std=c17 -Wall -Wextra -pthread -O2
+LIBS = -lm -lpthread
 
 main: main.o
 	$(CC) main.o $(LIBS) -o main
