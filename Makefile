@@ -1,6 +1,7 @@
 main:
 
 CC = clang
+#CC = avr-gcc
 
 CCFLAGS = -std=c17 -Wall -Wextra -pthread -O2
 LIBS = -static -lm -lpthread
